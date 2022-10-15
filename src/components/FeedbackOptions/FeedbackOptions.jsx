@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
+import styles from './FeedbackOptions.module.css';
 class FeedbackOptions extends Component {
   render() {
     return (
@@ -9,7 +9,7 @@ class FeedbackOptions extends Component {
           <button
             onClick={() => this.props.onLeaveFeedback(option)}
             key={option}
-            className="voteBtn"
+            className={styles.voteBtn}
           >
             {option}
           </button>

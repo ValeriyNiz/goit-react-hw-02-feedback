@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import Statistics from './Statistics/Statistics';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-import Section from './Section/Section';
-import Notification from './Notification/Notification';
+import Statistics from '../Statistics/Statistics';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Section from '../Section/Section';
+import Notification from '../Notification/Notification';
+import styles from './App.module.css';
 
 export class App extends Component {
   constructor() {
@@ -38,7 +39,7 @@ export class App extends Component {
     const { good, bad, neutral } = this.state;
     const totalFeedback = this.countTotalFeedback();
     return (
-      <div className="app">
+      <div className={styles.app}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
